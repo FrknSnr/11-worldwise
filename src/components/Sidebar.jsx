@@ -8,9 +8,7 @@ function Sidebar() {
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
-
       <Outlet />
-
       <footer className={styles.footer}>
         <p className={styles.copyright}>
           &copy; copyright {new Date().getFullYear()} by WorldWise Inc.
