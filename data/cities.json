@@ -1,64 +1,88 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "id": "a54b",
+      "cityName": "Mustafakemalpasa",
+      "country": "Turkiye",
+      "date": "2024-05-31T20:22:09.786Z",
       "notes": "",
+      "emoji": "🇹🇷",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
+        "lat": "39.94050835775758",
+        "lng": "28.69484616946519"
+      }
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Faro",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930386
-    },
-    {
-      "cityName": "Barcelona",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "id": "1511",
+      "cityName": "Bursa",
+      "country": "Turkiye",
+      "date": "2024-05-31T20:22:12.837Z",
       "notes": "",
+      "emoji": "🇹🇷",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806752
+        "lat": "40.16137794348518",
+        "lng": "29.097912044054254"
+      }
+    },
+    {
+      "id": "b167",
+      "cityName": "Istanbul",
+      "country": "Turkiye",
+      "date": "2024-05-31T20:22:34.459Z",
+      "notes": "",
+      "emoji": "🇹🇷",
+      "position": {
+        "lat": "41.04184070972199",
+        "lng": "28.872611518804057"
+      }
+    },
+    {
+      "id": "84a6",
+      "cityName": "Sinop",
+      "country": "Turkiye",
+      "date": "2024-05-31T20:22:39.760Z",
+      "notes": "",
+      "emoji": "🇹🇷",
+      "position": {
+        "lat": "41.991804092331115",
+        "lng": "35.06963618602315"
+      }
+    },
+    {
+      "id": "c923",
+      "cityName": "Altinordu",
+      "country": "Turkiye",
+      "date": "2024-05-31T20:22:44.424Z",
+      "notes": "",
+      "emoji": "🇹🇷",
+      "position": {
+        "lat": "40.93688533015427",
+        "lng": "37.77207850635815"
+      }
+    },
+    {
+      "id": "031e",
+      "cityName": "Avanos",
+      "country": "Turkiye",
+      "date": "2024-05-31T20:23:34.796Z",
+      "notes": "",
+      "emoji": "🇹🇷",
+      "position": {
+        "lat": "38.90601001825073",
+        "lng": "34.76186836606397"
+      }
+    },
+    {
+      "id": "35ae",
+      "cityName": "Hocalar",
+      "country": "Turkiye",
+      "date": "2024-05-31T20:25:07.064Z",
+      "notes": "",
+      "emoji": "🇹🇷",
+      "position": {
+        "lat": "38.57890970657076",
+        "lng": "29.996310441986466"
+      }
     }
   ]
 }

@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Product from "./pages/Product";
@@ -11,56 +9,36 @@ import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import City from "./components/City";
 import Form from "./components/Form";
-
-const BASE_URL = "http://localhost:9000";
+import { CitiesProvider } from "./contexts/CitiesProvider";
 
 function App() {
-  const [cities, setCities] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    async function fetchCities() {
-      try {
-        setIsLoading(true);
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
-        setCities(data);
-      } catch {
-        alert("There was an error loading data ...");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchCities();
-  }, []);
-
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* <Route index element={<Homepage />} /> 
+    <CitiesProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route index element={<Homepage />} /> 
         instead of writing path="/" we can also use index 
-        keyword to define a default component to be displayed  */}
-        <Route path="/" element={<Homepage />} />
-        <Route path="product" element={<Product />} />
-        <Route path="pricing" element={<Pricing />} />
-        <Route path="app" element={<AppLayout />}>
-          <Route index element={<Navigate to="cities" replace />} />
-          <Route
-            path="cities"
-            element={<CityList cities={cities} isLoading={isLoading} />}
-          />
-          <Route path="cities/:id" element={<City />} />
-
-          <Route
-            path="countries"
-            element={<CountryList cities={cities} isLoading={isLoading} />}
-          />
-          <Route path="form" element={<Form />} />
-        </Route>
-        <Route path="login" element={<Login />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+      keyword to define a default component to be displayed  */}
+          <Route path="/" element={<Homepage />} />
+          <Route path="product" element={<Product />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="app" element={<AppLayout />}>
+            <Route index element={<Navigate to="cities" replace />} />
+            <Route path="cities" element={<CityList />} />
+            {/* i can change the id to hey or any other name i want, but after
+            changing it, i have to change it in the City component as well
+            because it is called the variable name from the useParams hook or 
+            we can say from the URL. If it cannot match the variable name, 
+            it will return undefined.*/}
+            <Route path="cities/:id" element={<City />} />
+            <Route path="countries" element={<CountryList />} />
+            <Route path="form" element={<Form />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </CitiesProvider>
   );
 }
 

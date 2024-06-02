@@ -4,8 +4,11 @@ import CityItem from "./CityItem";
 import Spinner from "./Spinner";
 import Message from "./Message";
 import City from "./City";
+import { useCities } from "../contexts/CitiesProvider";
 
-function CityList({ cities, isLoading }) {
+function CityList() {
+  const { cities, isLoading } = useCities();
+
   if (isLoading) return <Spinner />;
 
   if (!cities.length)
@@ -15,7 +18,6 @@ function CityList({ cities, isLoading }) {
 
   return (
     <ul className={styles.cityList}>
-      <City />
       {cities.map((city) => (
         <CityItem city={city} key={city.id} />
       ))}
