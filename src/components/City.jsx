@@ -13,16 +13,16 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
+  //new way of getting the query params
   const { id } = useParams();
 
-  //new way of getting the query params
   const { currentCity, getCity } = useCities();
 
   useEffect(
     function () {
       getCity(id);
     },
-    [id]
+    [id, getCity]
   );
 
   //old way of getting the query params
